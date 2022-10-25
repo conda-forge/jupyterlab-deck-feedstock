@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlab-deck/jupyterlab-deck-{{ version }}.tar.gz
-  sha256: b824f93d3efc33d98a3e2f5aee259bd6f7591f1611db6f497719abfe8fc4f8ae
+  sha256: 0115d5ee3106dff9408678fc6a7e9601e062ca0f611f01b752256a1942fd3f88
 
 build:
   noarch: python
@@ -19,7 +19,8 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - jupyterlab >=3,<4
+    - jupyterlab >=3.3,<4
+    - jupyterlab-fonts >=2.1.1
     - python >=3.7
 
 test:
