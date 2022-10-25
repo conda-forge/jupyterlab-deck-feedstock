@@ -1,4 +1,4 @@
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: jupyterlab-deck
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlab-deck/jupyterlab-deck-{{ version }}.tar.gz
-  sha256: 7d967c09a876ea46afe9a57a32fa5695d3e363ba61338394483a2f8de74dd254
+  sha256: 0115d5ee3106dff9408678fc6a7e9601e062ca0f611f01b752256a1942fd3f88
 
 build:
   noarch: python
@@ -19,7 +19,8 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - jupyterlab >=3,<4
+    - jupyterlab >=3.3,<4
+    - jupyterlab-fonts >=2.1.1
     - python >=3.7
 
 test:
