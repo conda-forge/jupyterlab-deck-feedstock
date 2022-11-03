@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlab-deck/jupyterlab-deck-{{ version }}.tar.gz
-  sha256: 67c68ca0e6f44f555405b09c7ac899b20edc9ea4a9d675f69e4f87536e171c60
+  sha256: 78c8ebc78d50cce86506e4dbe8eea27f0791763eb11f06cf7361fce15671282d
 
 build:
   noarch: python
