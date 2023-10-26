@@ -1,27 +1,27 @@
-{% set version = "0.1.3" %}
+{% set version = "0.2.0a0" %}
 
 package:
   name: jupyterlab-deck
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/j/jupyterlab-deck/jupyterlab-deck-{{ version }}.tar.gz
-  sha256: 78c8ebc78d50cce86506e4dbe8eea27f0791763eb11f06cf7361fce15671282d
+  url: https://pypi.io/packages/source/j/jupyterlab-deck/jupyterlab_deck-{{ version }}.tar.gz
+  sha256: c4fe32be636998d47160c3564f88b53dde10089db7381aafa4cc217d8d39401a
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - flit-core >=3.7.1,<4
+    - flit-core >=3.9.0,<4
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
-    - jupyterlab >=3.3,<4
-    - jupyterlab-fonts >=2.1.1
-    - python >=3.7
+    - jupyterlab >=3.5,<5.0.0a0
+    - jupyterlab-fonts >=3.0.0a0
+    - python >=3.8
 
 test:
   imports:
@@ -43,7 +43,7 @@ about:
   doc_url: https://jupyterlab-deck.rtfd.io
   license_file:
     - LICENSE
-    - src/jupyterlab_deck/_d/share/jupyter/labextensions/@deathbeds/jupyterlab-deck/static/third-party-licenses.json
+    - src/_d/share/jupyter/labextensions/@deathbeds/jupyterlab-deck/static/third-party-licenses.json
 
 extra:
   recipe-maintainers:
